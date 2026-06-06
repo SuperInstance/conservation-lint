@@ -1,0 +1,21 @@
+[package]
+name = "conservation-lint"
+version = "0.1.0"
+edition = "2021"
+description = "A cargo-compatible linter that verifies conservation laws across Rust crates at build time"
+license = "MIT"
+repository = "https://github.com/SuperInstance/conservation-lint"
+
+[[bin]]
+name = "conservation-lint"
+path = "src/bin/conservation-lint.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+walkdir = "2"
+clap = { version = "4", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3"
